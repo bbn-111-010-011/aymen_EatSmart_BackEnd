@@ -1,0 +1,563 @@
+{
+	"info": {
+		"_postman_id": "a0d3e6da-b538-4acc-bf4f-df1b001796d9",
+		"name": "Dossier racine",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48520116",
+		"_collection_link": "https://pro-bbn-412212.postman.co/workspace/aymen-api-eatsmart~298f7fe5-9c76-449b-a728-ca8b2c0cd2ac/collection/48520116-a0d3e6da-b538-4acc-bf4f-df1b001796d9?action=share&source=collection_link&creator=48520116"
+	},
+	"item": [
+		{
+			"name": "Article",
+			"item": [
+				{
+					"name": "getAllArticles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/aymen-api-EatSmart/articles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-EatSmart",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getArticleById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/aymen-api-EatSmart/articles/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-EatSmart",
+								"articles",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getArticlesbyIdCommande",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/aymen-api-uber/commande/1/articles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-uber",
+								"commande",
+								"1",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createArticle",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"article_id\": \"35\",\r\n        \"nom\": \"aymen 23cm\",\r\n        \"prix\": \"7.9000\",\r\n        \"description\": \"sauce tomate premium, origan, huile d'olive extra vierge, anchois, olive\",\r\n        \"categorie_id\": \"1\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/aymen-api-EatSmart/articles",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-EatSmart",
+								"articles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateArticle",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"article_id\": \"35\",\r\n        \"nom\": \"AYMEN 12cm\",\r\n        \"prix\": \"7.9000\",\r\n        \"description\": \"sauce tomate premium, origan, huile d'olive extra vierge, anchois, olive\",\r\n        \"categorie_id\": \"1\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/aymen-api-EatSmart/articles/35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-EatSmart",
+								"articles",
+								"35"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteArticle",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/aymen-api-EatSmart/articles/35",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-EatSmart",
+								"articles",
+								"35"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "getAllClients",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"client_id\": \"8\",\r\n        \"client_nom\": \"tegvg\",\r\n        \"client_telephone\": \"06788876\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost/aymen-api-uber/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-uber",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getClientById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/aymen-api-uber/clients/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-uber",
+								"clients",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createClient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"client_id\": \"11\",\r\n        \"client_nom\": \"teg\",\r\n        \"client_telephone\": \"06788876\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/aymen-api-uber/clients",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-uber",
+								"clients"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateClient",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"client_id\": \"4\",\r\n        \"client_nom\": \"aymen\",\r\n        \"client_telephone\": \"06788876\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost/aymen-api-uber/clients/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-uber",
+								"clients",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteClient",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"client_id\": \"4\",\r\n        \"client_nom\": \"aymen\",\r\n        \"client_telephone\": \"06788876\"\r\n}\r\n"
+						},
+						"url": {
+							"raw": "http://localhost/aymen-api-uber/clients/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-uber",
+								"clients",
+								"11"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categorie",
+			"item": [
+				{
+					"name": "getAllCategorie",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/aymen-api-EatSmart/categorie",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-EatSmart",
+								"categorie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategorieById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/aymen-api-EatSmart/categorie/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-EatSmart",
+								"categorie",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCategorieByIdArticles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/aymen-api-uber/voitures/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-uber",
+								"voitures",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCategorie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"categorie_id\": \"10\",\r\n        \"nom\": \"TEST\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/aymen-api-EatSmart/categorie",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-EatSmart",
+								"categorie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCategorie",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"categorie_id\": \"10\",\r\n        \"nom\": \"prenom\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/aymen-api-EatSmart/categorie/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-EatSmart",
+								"categorie",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCategorie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/aymen-api-EatSmart/categorie/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-EatSmart",
+								"categorie",
+								"10"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Commande",
+			"item": [
+				{
+					"name": "getAllCommande",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/aymen-api-EatSmart/commande",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-EatSmart",
+								"commande"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCommandeById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/aymen-api-EatSmart/commande/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-EatSmart",
+								"commande",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCommandeByIdArticles",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "createCommande",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"commande_id\": \"10\",\r\n        \"date_commande\": \"2024-10-25 10:00:00\",\r\n        \"prix_total\": \"49\",\r\n        \"etat\": \"en cours\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/aymen-api-EatSmart/commande/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-EatSmart",
+								"commande",
+								"9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCommande",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"commande_id\": \"10\",\r\n        \"date_commande\": \"2024-10-25 10:00:00\",\r\n        \"prix_total\": \"9\",\r\n        \"etat\": \"en cours\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/aymen-api-EatSmart/commande/10",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-EatSmart",
+								"commande",
+								"10"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCommande",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/aymen-api-EatSmart/commande/9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"aymen-api-EatSmart",
+								"commande",
+								"9"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

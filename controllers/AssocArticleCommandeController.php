@@ -1,0 +1,85 @@
+<?php
+
+require_once "models/AssocArticleCommandeModel.php";
+
+class AssocArticleCommandeController
+{
+    private $model;
+
+    public function __construct()
+    {
+        $this->model = new AssocArticleCommandeModel();
+    }
+
+
+
+    public function getAllClients()
+    {
+        $clients = $this->model->getDBAllClient();
+        echo json_encode($clients);
+    }
+
+
+
+    public function getClientById ($idClient) {
+        $lignesClient = $this->model->getDBClientById($idClient);
+        echo json_encode($lignesClient);
+    }
+
+
+
+
+
+
+
+
+    public function createClient($data)
+     {
+        $lignesClient=$this->model->createDBClient($data);
+        http_response_code(201);
+        echo json_encode($lignesClient);
+     }
+
+
+
+
+
+     public function updateClient($id, $data)
+     {
+      
+      $success=$this->model->updateDBClient($id ,$data);
+      if($success)
+      {
+        http_response_code(204);
+      }
+      
+      else 
+      {
+        http_response_code(404);
+        echo json_encode(["message" => "chauffeur non trouve ou non mdifie"]);
+      }
+     }
+
+
+
+
+
+     public function deleteClient($id)
+     {
+        $success=$this->model->deleteDBClient($id);
+        if ($success)
+        {
+            http_response_code(204);
+        }
+        else
+        {
+            http_response_code(404);
+            echo json_encode(["message"=> "chauffeur introuvable"]);
+        }
+     }
+
+
+
+}
+// $chauffeurController = new ChauffeurController();
+// $chauffeurController->getAllChauffeurs();
